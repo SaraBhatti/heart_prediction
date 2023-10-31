@@ -30,7 +30,7 @@ def main():
     
     ##set title and content
     st.title('Heart Failure preditor using Artificial Neural Network')
-    st.write('Entrer you personal data to get your heart risk evaluation')
+    st.write('Enter you personal data to get your heart risk evaluation')
     
     ## Get the input form the user
     age = st.number_input('Age of the patient:',min_value=0, step=1)
