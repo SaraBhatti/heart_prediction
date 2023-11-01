@@ -41,7 +41,7 @@ def main():
     diabetes = st.number_input('Diabetes | Yes or No | yes = 1 and no = 0', min_value=0, max_value=1, step=1)
     ejection_fraction = st.number_input('Percentage of blood leaving the heart', min_value=0, max_value=1, step=1)
     high_blood_pressure = st.number_input('Hypertention | Yes or No | yes = 1 and no = 0', min_value=0, max_value=1, step=1)
-    platelets = st.number_input('Platelets - count of blood (kiloplatelets/ml)', min_value=0.00, step=1)
+    platelets = st.number_input('Platelets - count of blood (kiloplatelets/ml)', min_value=0.00, step=0.01)
     serum_creatinine = st.number_input('Level of serum creatinine in the blood (mg/dl))', min_value=0.00, step=0.01)
     serum_sodium = st.number_input('Level of serum sodium in the blood (mEq/l))', min_value=0, step=1)
     sex = st.number_input('Sex | Male or Female | Female = 1 and Male = 0', min_value=0, max_value=1, step=1)
