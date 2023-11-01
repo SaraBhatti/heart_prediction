@@ -36,23 +36,23 @@ def main():
     
     ## Get the input form the user
     age = st.number_input('Age of the patient:',min_value=0, step=1)
-    anaemia = st.number_input('Anaemia | Yes or No | yes = 1 and no = 0', min_value=0, step=1)
+    anaemia = st.number_input('Anaemia | Yes or No | yes = 1 and no = 0', min_value=0, max_value=1, step=1)
     creatinine_phosphokinase = st.number_input('Level of the CPK enzyme inb the blood (mcg/L)', min_value=0, step=1)
-    diabetes = st.number_input('Diabetes | Yes or No | yes = 1 and no = 0', min_value=0, step=1)
-    ejection_fraction = st.number_input('Percentage of blood leaving the heart', min_value=0, step=1)
-    high_blood_pressure = st.number_input('Hypertention | Yes or No | yes = 1 and no = 0', min_value=0, step=1)
-    platelets = st.number_input('Platelets - count of blood (kiloplatelets/ml)', min_value=0, step=1)
+    diabetes = st.number_input('Diabetes | Yes or No | yes = 1 and no = 0', min_value=0, max_value=1, step=1)
+    ejection_fraction = st.number_input('Percentage of blood leaving the heart', min_value=0, max_value=1, step=1)
+    high_blood_pressure = st.number_input('Hypertention | Yes or No | yes = 1 and no = 0', min_value=0, max_value=1, step=1)
+    platelets = st.number_input('Platelets - count of blood (kiloplatelets/ml)', min_value=0.00, step=1)
     serum_creatinine = st.number_input('Level of serum creatinine in the blood (mg/dl))', min_value=0.00, step=0.01)
     serum_sodium = st.number_input('Level of serum sodium in the blood (mEq/l))', min_value=0, step=1)
-    sex = st.number_input('Sex | Male or Female | Female = 1 and Male = 0', min_value=0, step=1)
-    smoking = st.number_input('Smoker | Yes or No | yes = 1 and no = 0', min_value=0, step=1)
-    time = st.number_input('Follow up period (days):', min_value=0, step=1)
+    sex = st.number_input('Sex | Male or Female | Female = 1 and Male = 0', min_value=0, max_value=1, step=1)
+    smoking = st.number_input('Smoker | Yes or No | yes = 1 and no = 0', min_value=0, max_value=1, step=1)
+
     
     ## code for prediction
     predict =''
     ## button for prediction
     if st.button('Predict'):
-        predict = heart_prediction([age,anaemia, creatinine_phosphokinase, diabetes, ejection_fraction, high_blood_pressure, platelets, serum_creatinine, serum_sodium, sex, smoking, time])
+        predict = heart_prediction([age,anaemia, creatinine_phosphokinase, diabetes, ejection_fraction, high_blood_pressure, platelets, serum_creatinine, serum_sodium, sex, smoking])
     st.success(predict)
     
 if __name__ == '__main__':
