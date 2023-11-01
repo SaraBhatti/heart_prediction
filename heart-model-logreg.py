@@ -7,7 +7,7 @@ import numpy as np
 import pickle
 
 ## load logistic regression model
-with open('logistic_regression_model.pkl', 'rb') as file:
+with open('log_regression_mod2.pkl', 'rb') as file:
     model = pickle.load(file)
 
 ## create a function for prediction 
